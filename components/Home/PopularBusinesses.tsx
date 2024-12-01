@@ -29,7 +29,6 @@ const PopularBusinesses = () => {
             const querySnapshot = await getDocs(q)
 
             querySnapshot.forEach(doc => {
-                console.log(doc?.data())
                 setBusinesses(pre => [...pre, { id: doc?.id, ...doc?.data() } as Business])
             })
 

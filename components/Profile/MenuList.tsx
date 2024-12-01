@@ -25,7 +25,6 @@ const MenuList = () => {
       Share.share({ message: 'Download the DirectoryB by DevX - Download URL' })
     }
     else {
-      console.log('\n\n\n\n\n\n\nitem', item.path, '\n\n\n\n\n\n\n')
       router.push(item.path)
     }
   }

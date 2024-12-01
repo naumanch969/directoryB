@@ -33,7 +33,6 @@ ExploreBusinessList.BusinessCard = ({ business }: { business: Business }) => {
     const router = useRouter()
 
     const onPress = () => {
-        console.log('businessId', business.id)
         router.push('/businessDetail/' + business?.id)
     }
 

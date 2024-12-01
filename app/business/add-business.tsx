@@ -66,7 +66,6 @@ const AddBusiness = () => {
 
         const imageRef = ref(storage, `business-app/${fileName}`)
 
-        console.log('this')
 
         setLoading(true)
         uploadBytes(imageRef, blob)
@@ -77,7 +76,6 @@ const AddBusiness = () => {
 
                 getDownloadURL(imageRef).then((url: string) => {
                     saveBusinessDetail(url)
-                    console.log('url', url)
                 })
 
             })
@@ -116,8 +114,6 @@ const AddBusiness = () => {
             aspect: [4, 3],
             quality: 1,
         });
-
-        console.log(result);
 
         if (!result.canceled) {
             setImage(result.assets[0].uri);
